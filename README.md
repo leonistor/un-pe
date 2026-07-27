@@ -1,8 +1,12 @@
-# React + TypeScript + Vite + shadcn/ui
+# understanding people personality test
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+## description
 
-## Adding components
+
+
+## developer notes
+
+## React + TypeScript + Vite + shadcn/ui - Adding components
 
 To add components to your app, run the following command:
 
