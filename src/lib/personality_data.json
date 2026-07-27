@@ -1,0 +1,998 @@
+{
+  "people_types": [
+    {
+      "name": "romantic",
+      "minColumn": "b",
+      "partner": "warrior"
+    },
+    {
+      "name": "warrior",
+      "minColumn": "d",
+      "partner": "romantic"
+    },
+    {
+      "name": "expert",
+      "minColumn": "a",
+      "partner": "mastermind"
+    },
+    {
+      "name": "mastermind",
+      "minColumn": "c",
+      "partner": "expert"
+    }
+  ],
+  "people_styles": [
+    {
+      "name": "Best Friend",
+      "code": "bestfriend",
+      "lowestScore": "b",
+      "nextLowestScore": "a",
+      "majorType": "romantic",
+      "secondaryType": "expert"
+    },
+    {
+      "name": "Love Interest",
+      "code": "loveinterest",
+      "lowestScore": "b",
+      "nextLowestScore": "c",
+      "majorType": "romantic",
+      "secondaryType": "mastermind"
+    },
+    {
+      "name": "Crusader",
+      "code": "crusader",
+      "lowestScore": "b",
+      "nextLowestScore": "d",
+      "majorType": "romantic",
+      "secondaryType": "warrior"
+    },
+    {
+      "name": "Hired Gun",
+      "code": "hiredgun",
+      "lowestScore": "d",
+      "nextLowestScore": "b",
+      "majorType": "warrior",
+      "secondaryType": "romantic"
+    },
+    {
+      "name": "Sage",
+      "code": "sage",
+      "lowestScore": "d",
+      "nextLowestScore": "a",
+      "majorType": "warrior",
+      "secondaryType": "expert"
+    },
+    {
+      "name": "Power Broker",
+      "code": "powerbroker",
+      "lowestScore": "d",
+      "nextLowestScore": "c",
+      "majorType": "warrior",
+      "secondaryType": "mastermind"
+    },
+    {
+      "name": "Voice of Reason",
+      "code": "voiceofreason",
+      "lowestScore": "a",
+      "nextLowestScore": "b",
+      "majorType": "expert",
+      "secondaryType": "romantic"
+    },
+    {
+      "name": "Specialist",
+      "code": "specialist",
+      "lowestScore": "a",
+      "nextLowestScore": "d",
+      "majorType": "expert",
+      "secondaryType": "warrior"
+    },
+    {
+      "name": "Detective",
+      "code": "detective",
+      "lowestScore": "a",
+      "nextLowestScore": "c",
+      "majorType": "expert",
+      "secondaryType": "mastermind"
+    },
+    {
+      "name": "Eccentric",
+      "code": "eccentric",
+      "lowestScore": "c",
+      "nextLowestScore": "a",
+      "majorType": "mastermind",
+      "secondaryType": "expert"
+    },
+    {
+      "name": "Social Reformer",
+      "code": "socialreformer",
+      "lowestScore": "c",
+      "nextLowestScore": "b",
+      "majorType": "mastermind",
+      "secondaryType": "romantic"
+    },
+    {
+      "name": "Adventurer",
+      "code": "adventurer",
+      "lowestScore": "c",
+      "nextLowestScore": "d",
+      "majorType": "mastermind",
+      "secondaryType": "warrior"
+    }
+  ],
+  "styles_descriptions": [
+    {
+      "code": "adventurer",
+      "headline": "Boldly go where no man has gone before.",
+      "short": "If a style could be a poster child for an entrepreneur, it would be the Adventurer. Whereas the Power Broker gets things done within the framework of the organization, the Adventurer prefers to operate on the outside. Adventurers are all about discovery, but not just any discovery: It has be a discovery that has value and can be implemented. They are both conceptual and logical, so they are not prone to flights of fancy. They don’t get excited about an idea until they can imagine a clear strategy for realizing it. It’s this quality that often allows them to succeed.",
+      "words": [
+        "Daring",
+        "Strategic",
+        "Driven",
+        "Entrepreneurial",
+        "Creative",
+        "Conceptual",
+        "Direct",
+        "Results-oriented",
+        "Exciting",
+        "Comfortable in chaos",
+        "Independent",
+        "Inspirational"
+      ],
+      "leaders": "As leaders, Adventurers are natural entrepreneurs who inspire other with both a vision of a desired future state and a strategy for achieving it. They are less interested in the details and may be unaware of how others feel about this plan. They have a high risk tolerance, protecting against possible failure by logically thinking through the steps to achieve their goals. They value high performers and reward them with more responsibility and greater latitude.",
+      "sales": "As sales professionals, Adventurers are true hunters. They seek new markets, clients, and opportunities. They work best when given few parameters, thus allowing them to explore the “wilderness for fertile ground.”",
+      "service": "As service providers, Adventurers are creative problem solvers. They can be given challenging scenarios to troubleshoot and will be comfortable experimenting with new solutions. There is also the possibility that their risk taking will create different problems, but they will approach each situation with both innovation and logic.",
+      "team": "As team members, Adventurers may prefer to work alone on unique projects. They enjoy being placed in novel situations and receiving great authority to work autonomously. Although they can and will work within an organizational structure, they also have a comfort with stretching the boundaries of the existing policies and procedures.",
+      "hollywood": "The swashbuckling Adventurer is another of Hollywood’s favorites. Who doesn’t like to follow the exploits of the fearless explorer through exotic locations, defending against unforeseen foes while pursuing some treasure? Errol Flynn, Harrison Ford as Indiana Jones, Angelina Jolie as Lara Croft, and Rachel Weisz in the Mummy movies have all portrayed this style. Harrison’s Indiana Jones represents the prototypical Adventurer in his relentless pursuit of something valuable while also packing a whip, just in case.",
+      "quickref": {
+        "leadership": [
+          "An inspiring visionary with a plan to achieve his or her goals",
+          "Direct communicator",
+          "Tends toward critical feedback",
+          "Rewards with additional responsibility and autonomy",
+          "Innovative and strategic",
+          "Less interested in details and morale"
+        ],
+        "sales": [
+          "Comfortable in new markets",
+          "Assertive closer",
+          "Prefers loosely structured situations",
+          "Creatively matches client needs to products and services"
+        ],
+        "service": [
+          "Innovative troubleshooter",
+          "Discovers unconventional fixes to customer service challenges",
+          "May work outside the boundaries to organizational policy",
+          "Willing to take chances to solve problems"
+        ],
+        "team": [
+          "Highly productive",
+          "Creative and logical",
+          "May prefer to work autonomously",
+          "Likes unusual assignments that allow for great latitude to operate"
+        ]
+      }
+    },
+    {
+      "code": "bestfriend",
+      "headline": "If you need a hug and a shoulder to cry on, the Best Friend is your person.",
+      "short": "I always begin with this combination during my seminars. I have them stand up and pronounce them to be “the nicest people in the room.” Best Friends always have their “spoons” ready to help others empty the crap out of their CTL container. They are the master counselors, the best at navigating the venting process. If you are having trouble and need someone to talk to, there is no better person than the Best Friend. Best Friends are also steady, dependable contributors. They rarely make mistakes and work very well within a structured environment. They are comfortable with policies and procedures and respect the organization’s processes and hierarchy.",
+      "words": [
+        "Compassionate",
+        "Caring",
+        "Empathetic",
+        "Reliable",
+        "Consistent",
+        "Trustworthy",
+        "Patient",
+        "Tactful",
+        "Accurate",
+        "Steady",
+        "Methodical",
+        "Thorough"
+      ],
+      "leaders": "As leaders, Best Friends provide a steadying influence. They have almost a parental relationship with their team. They create well-defined roles and responsibilities. They often know a great deal about the line-level job and may have once done it for a living. They enforce procedures and run a tight ship when it comes to compliance. They spend ample time in coaching and counseling. They may struggle a bit with conflict and have a tendency to avoid uncomfortable conversations. They don’t necessary pursue or even enjoy change initiatives; however, they are very important to this effort because they can challenge the effectiveness of new approaches and patiently train staff members on new systems and processes. Best Friend leaders often achieve high levels of morale, good communication, few mistakes, and low turnover. They create a </i>family</i> within their teams.",
+      "sales": "As sales professionals, Best Friends are the consummate relationship builders. They diligently devote themselves to understanding their products and services and work hard to develop meaningful, long-term relationships with clients built on friendship, trust, and reliability. Their credibility on both a personal and a professional level makes them appealing to people who enjoy working with a knowledgeable friend. Their customers are loyal and depend on them for accurate, thoughtful advice. However, they may struggle when dealing with customer objections because the dynamic can feel antagonistic. They also may not close aggressively, because applying pressure on the customer may feel slightly confrontational. Keep in mind that people can develop skills in an area that may not be natural for them based on their style. Given that, there is no reason to believe that Best Friends can’t learn to handle closing and objections quite well.",
+      "service": "As service providers, Best Friends want to take care of you. They want to make sure that you are happy and that you received accurate information. They keep their promises and feel emotionally vested in your satisfaction. They will be very thorough in ensuring that your experience meets your expectations. They will take any mistake very seriously and apologize profusely. Many Best Friends have made friends with their customers.",
+      "team": "Best Friends are often the team members to whom others vent. They generally have a keen awareness of the organization’s morale. They are reliable performers who approach their jobs with steadiness, knowledge, and caution. Although they’re good team players, they may shy away from confronting others. They may also become a bit passive-aggressive if they don’t think their leader values them. They work best in environments that offer abundant praise, are well structured, and have clear direction and expectations.",
+      "hollywood": "Hollywood casts the Best Friend in a supporting role most often. Every romantic comedy has a main character whose life is a bit chaotic and whose adventures become the plot development. By the main character’s side is his or her trusted, reliable Best Friend. This person is commonly more settled down, often married, and tries to offer some advice and stability to the main character. That is the role of the Best Friend, to maintain or restore the calm during chaos. Some iconic Best Friends in Hollywood: Mary Tyler Moore, Rachel in Friends, and almost any role featuring John Goodman.",
+      "quickref": {
+        "leadership": [
+          "Quick to praise",
+          "Great coach",
+          "May be slow to criticize",
+          "Adept at allowing others to vent",
+          "Complies with rules",
+          "Consistent",
+          "Makes few mistakes",
+          "May be slow to change",
+          "Very aware of employee morale",
+          "Loyal to the team and the organization"
+        ],
+        "sales": [
+          "Creates long-term relationships",
+          "Builds existing customer business",
+          "Has great knowledge of the product",
+          "May struggle with closing",
+          "May struggle with objections",
+          "Will be compliant with paperwork and process requirements"
+        ],
+        "service": [
+          "Will provide accurate information to customers",
+          "Empathizes with the customer’s situation",
+          "Listens actively",
+          "May be overly influenced by emotional issues",
+          "May lack creativity in resolving customer needs",
+          "Is polite and cordial to customers",
+          "Gets to know customers personally"
+        ],
+        "team": [
+          "Keen awareness of the organization’s morale",
+          "Reliable performers",
+          "May avoid confronting others"
+        ]
+      }
+    },
+    {
+      "code": "crusader",
+      "headline": "The self-sacrificing hero accepting responsibility for others and the cause.",
+      "short": "As discussed previously, all Romantics want world peace. They work hard to make sure everyone is happy and getting along. To review: Best Friends use security and counseling to achieve world peace. They provide compassionate stability that comforts those around them. Love Interests use joy and optimism to achieve world peace. They provide enthusiasm and fun to ensure that the future is even better than the present. And Crusaders get world peace by killing. However, they often don’t want to do it. “Who do I have to kill to make you happy?” wonder the Crusaders. They take no joy from the kill and would prefer to find alternative solutions to the barriers to world peace, but when forced into action to resolve an issue, they kill. This can come as quite a surprise to their fellow Romantics, because many of their colleagues had no idea the Crusader was armed. Their weapons are concealed, and their skills to wield them are rarely displayed. But you can rest assured, the Crusader is packin’.",
+      "words": [
+        "Fiercely loyal",
+        "Committed",
+        "Empathetic",
+        "Caring",
+        "Assertive",
+        "Tactful, but not patient",
+        "Strategic",
+        "Competitive",
+        "Conflicted (win or be liked?)",
+        "Productive",
+        "Responsible",
+        "Solution-focused"
+      ],
+      "leaders": "As leaders, Crusaders can be very protective of their people. They will appreciate their accomplishments while also expecting them to contribute to achieving the desired goal. They will give measured criticism, trying to ensure that they get the results they need without creating any ill will among the team members. They often take on additional responsibility. They like metrics on important processes and approach meetings with a clear agenda for enhancing the team’s productivity while also keeping morale high. They give their team members’ independence, particularly those who are performing well. Although they do not enjoy conflict, they will engage in counseling when it is clear that a person is not willing or able to contribute to the cause.",
+      "sales": "As sales professionals, Crusaders take the consummate consultative approach. They listen to their clients’ needs and develop clear strategies for helping them with their challenges. Crusaders use both relationship building and logic to develop a strategy that benefits both parties, and they will sacrifice their own needs if necessary to make a deal work. They are comfortable finding new clients, but truly enjoy the satisfaction of solving existing clients’ new problems.",
+      "service": "As service providers, Crusaders work hard to make others happy. They know how to get results by working both inside the system or, if necessary, taking some shortcuts. They are good in the service recovery role because they are excellent troubleshooters. They may even be more committed to the customer than to their own company if they believe that the customer was treated wrongly or did not receive what was promised.",
+      "team": "As team members, Crusaders are generally very productive members of the team. They get things done. They are comfortable working with others but may prefer to work independently the majority of the time. They are diplomatic but also eager to see things improve. This combination may make them the most likely to speak out against policies or actions that they think are wrong for the people. In this way, they can become the very malcontent that they often kill. (See the earlier Mark story.)",
+      "hollywood": "Hollywood casts the Crusader in the hero role. The Crusader is often viewed as a selfless fighter fighting for an underdog cause. For years, Hollywood called one person when they needed a leading man to play the role of the Crusader: Mel Gibson. Plot: He’s happy and content and living in the Outback of Australia. They kill his wife. Now, he’s Mad Max. Plot: He’s happy and content and living in New England. They kill his son. Now, he’s The Patriot. Plot: He’s happy and content. They kill his wife and take his land. Now, he’s Braveheart. He is the Crusader in each movie; he just wears different period costumes. Of course, Mel has displayed some unfortunate personal characteristics that have eroded his box office appeal since his heyday. Enter Gerard Butler in 300. “We are Sparta!” For the women, Jennifer Lawrence in The Hunger Games is a great example of the Crusader.",
+      "quickref": {
+        "leadership": [
+          "Provides a mix of praise and carefully worded criticism",
+          "Very loyal to the cause (his or her team, the organization, the customer)",
+          "Diplomatic",
+          "Has a slight intensity that is masked with tact",
+          "Likes metrics that measure success",
+          "Less rule-bound, more goal-oriented",
+          "Organizes meetings around outcomes",
+          "Analytical but gives morale issues priority",
+          "Grows more tense when results are not achieved",
+          "Eager for more responsibility"
+        ],
+        "sales": [
+          "Builds relationships with productive clients",
+          "Exceptional consultative salesperson",
+          "Sees a clear strategy to achieving the desired outcome",
+          "Negotiates win-win outcomes",
+          "May take the outcome personally",
+          "Has a tendency to overextend himself or herself to please the client or company"
+        ],
+        "service": [
+          "Identifies needs and problems quickly",
+          "Is motivated by resolving barriers",
+          "Gets results quickly",
+          "Works hard for customers that have been poorly treated",
+          "Knows ways around the process to achieve solutions",
+          "Engages in some relationship building and then quickly transitions to the business purpose of transaction",
+          "Is sometimes asked for by name by repeat customers"
+        ],
+        "team": [
+          "Likable but may prefer to work independent of others",
+          "Gets things done",
+          "Likes to be appreciated and also left alone by his or her leader",
+          "Good troubleshooter",
+          "Likes new assignments if a clear expected outcome has been identified",
+          "May question direction not agreed with",
+          "Strives to be considered the best",
+          "Tactful with coworkers but interested in working directly only with the ones who are competent and have shared goals"
+        ]
+      }
+    },
+    {
+      "code": "detective",
+      "headline": "Brilliant or loopy? Yes. The Detective can be either and both, but don’t dismiss a Detective’s ideas no matter how offbeat.",
+      "short": "The Detective will cure cancer some day. Unfortunately, no one will understand what the Detective is talking about. This style combines the Expert’s focus and detailed approach with the Mastermind’s risk tolerance and conceptual mind. That frees the Detective to experiment with processes and work outside of systems, but in a methodical and replicable way. Detectives are like the mad scientists in the laboratory, combining existing concoctions in creative ways to see what happens. It could be amazing—or it might explode.",
+      "words": [
+        "Knowledgeable",
+        "Quirky",
+        "Creative",
+        "Conceptual",
+        "Research-based",
+        "Unconventional",
+        "Thorough",
+        "Enthusiastic",
+        "Unpredictable",
+        "Experimental",
+        "Different",
+        "Specific"
+      ],
+      "leaders": "As leaders, Detectives inspire others with their depth of knowledge and willingness to take calculated chances. They push technical people in creative directions by providing a framework of structure that can be applied in new ways. They have a methodology for exploration.",
+      "sales": "As sales professionals, Detectives use an established sales process to identify new opportunities. They find unconventional markets for their products and services. They are detailed and thorough, yet comfortable exploring new situations and applications for what they sell.",
+      "service": "Detective service providers can always find a way to apply policies and procedures to even the most uncommon customer problem. They are comfortable defending their solutions, not as precedent, but as a natural extension of an existing approach. They are creative but compliant.",
+      "team": "Detectives may not be the most conventional communicators as team members; they may appear to introduce unusual topics unrelated to the current discussion. However, if you pay attention, these ideas often have incredible merit if you allow yourself to think outside the box. More accurately, allow Detectives to introduce a new box—this is where they excel.",
+      "hollywood": "The Detective is generally portrayed by a somewhat quirky character in films. Sherlock Holmes was always able to arrive at creative solutions by paying close attention to the details. The title characters in Monk, Columbo, and House M.D. are Detectives who have been featured on television programs. MacGyver made the combination of technical knowledge and creativity into a weekly plot device. Each character possesses a great depth of expertise and displays these skills in unusual ways. In the television show Bones, Emily Deschanel’s Dr. Temperance Brennan combines science and geekiness to create forensic genius. Robert Downey Jr.’s Iron Man is another example of what happens when the Expert and Mastermind style combine.",
+      "quickref": {
+        "leadership": [
+          "Technically proficient",
+          "Offers structured creativity",
+          "Risk aware and uses policies and procedures to mitigate the possibility of mistakes",
+          "Leads by example",
+          "Unconventional",
+          "Comfortable applying policies and processes in new ways"
+        ],
+        "sales": [
+          "Uses a process",
+          "Comfortable in both existing and new markets",
+          "Sells with knowledge and flexibility",
+          "Acts as consultant on technical matters"
+        ],
+        "service": [
+          "Solves problems by combining a deep knowledge of products and services with a willingness to be creative",
+          "Enjoys a complicated issue",
+          "Not overly personable, gains respect by understanding issues and persistently pursuing a fix"
+        ],
+        "team": [
+          "Provides both ideas and structure",
+          "May be a little socially clunky",
+          "Excellent support for both Romantics and Warriors",
+          "Comfortable working independently",
+          "Knows policies, procedures, and processes but may apply them in unusual ways",
+          "May come across as a little geeky about his or her area of expertise"
+        ]
+      }
+    },
+    {
+      "code": "eccentric",
+      "headline": "The savvy crisis manager, the Eccentric can make the unreal become real. Marketing genius and ‘nuttier than an elephant burp.’",
+      "short": "When I read the quote above in a newspaper in Phoenix, used to describe mountain bikers, I immediately thought of the Eccentric. Eccentrics are one of the most intriguing styles for me. When I listen to them talk about the future, they present a very compelling argument that the unreal can become real. They are masters of recreating the perception of a situation into something completely different than you think. My favorite Hollywood Eccentric is Johnny Depp’s Captain Jack Sparrow from Pirates of the Caribbean. Somehow he manages to convince others of his gravitas as a pirate captain despite the obvious limitations of having no crew, no ship, and no treasure. He doesn’t even have a parrot. But what he does have is a vision ... and the correct wardrobe.",
+      "words": [
+        "Energetic",
+        "Passionate",
+        "Process-oriented",
+        "Uncommon",
+        "Risk tolerant",
+        "Entrepreneurial",
+        "Detailed",
+        "Conceptual",
+        "Eccentric (I know, that’s cheating)",
+        "Inspiring",
+        "Unconventional",
+        "Unique"
+      ],
+      "leaders": "As leaders, Eccentrics are both visionaries and pragmatists. They seek a desired future state that they can arrive at using all of the existing structure. They inspire by providing optimism and reassuring others that all the resources necessary for success already surround them.",
+      "sales": "As sales professionals, Eccentrics’ depth of knowledge and unwavering faith in a positive outcome make them very persuasive. They are not dissuaded by objections and remain persistent in the face of rejection. Their unshakable belief in the ability of their products and/or services is infectious.",
+      "service": "As service providers, Eccentrics are creative problem solvers who can find new and different ways to use the system to achieve the desired result. They mitigate risk with structure and use policies and procedures to achieve innovative outcomes.",
+      "team": "As team members, Eccentrics are charismatic, if sometimes unconventional, contributors who will be comfortable in loosely defined situations while quickly establishing their own processes for ensuring quality. Although their ideas may appear radical, they can support them with compelling data.",
+      "hollywood": "Hollywood loves a good Eccentric. Virtually every superhero movie has a couple of them. He or she might be the evil genius or perhaps a hero. The aforementioned Johnny Depp is a great example. Val Kilmer as Doc Holliday in Tombstone was the Eccentric, as is virtually anything John Malkovich has ever played. In fact, both he and Glenn Close play Eccentrics in Dangerous Liaisons. (And leave it to an Eccentric woman to be named Glenn.) The Sheldon Cooper character on Big Bang Theory also comes to mind. Tina Fey pulls off a comedic version on 30 Rock, as does Jennifer Coolidge as Stifler’s mom in American Pie. Like I said, Hollywood loves the Eccentric.",
+      "quickref": {
+        "leadership": [
+          "An excellent agent for change",
+          "Structured but flexible",
+          "Innovative but cautious",
+          "Able to provide data to support new directions",
+          "Unconventional"
+        ],
+        "sales": [
+          "Enthusiastic about product and service capabilities",
+          "Persuasive and persistent",
+          "Has deep product knowledge",
+          "Comfortable using structure to pursue new markets"
+        ],
+        "service": [
+          "Fearless problem solver",
+          "Knowledgeable about policies and procedures",
+          "Will get creative in providing technical support"
+        ],
+        "team": [
+          "Comfortable in loosely defined situations",
+          "Reliable, if unconventional, performer",
+          "May specialize in unusual responsibilities",
+          "May work best on his or her own rather than in a team"
+        ]
+      }
+    },
+    {
+      "code": "expert",
+      "words": [
+        "Trust what is certain and concrete",
+        "Value realism and common sense",
+        "Like to apply and hone established skills",
+        "Tend to be specific and literal",
+        "Give detailed instructions",
+        "Present information in a step-by-step manner",
+        "Are focused on the present",
+        "Have great respect for the rules",
+        "Value consistency and reliability",
+        "Respond best to a salesperson or customer service provider who is knowledgeable",
+        "Often have great depth of knowledge about the process",
+        "If lacking depth of knowledge, may want to obtain it from you",
+        "Very specific with their questions and requests",
+        "Disappointed if things don’t go exactly as they were told",
+        "May appear stubborn on small issues",
+        "Complete assignments on time and are detailed",
+        "Like appointments for callbacks and upcoming interactions"
+      ],
+      "leaders": "Experts are thought leaders. They often have more technical knowledge than any other member of their team. They are well versed in the policies, procedures, practices, and processes that affect the workplace. They value accuracy and operate with a similar philosophy as a Lean Six Sigma practitioner. They prefer refining over reinventing. They can be rigid and historically based, which can lead to challenges during change initiatives. When working well, the Expert-led team produces high-quality outputs that are compliant with all regulations and requirements.",
+      "sales": "Experts sell with knowledge. They take great pride in learning everything about their products and services. There is not a question that they cannot answer. Their guidance is accurate, and they often are very thorough in training their customers about the features and benefits of their offerings. They are organized in their approach and often use a formal system for identifying opportunities, documenting progress, and following up with clients. They may struggle with new products and services until they feel knowledgeable enough to represent them and they may become a bit too feature-driven when selling because of their depth of familiarity.",
+      "service": "Experts use their thorough knowledge of their services and the system to provide their clients with exactly what they were promised. They take their responsibilities seriously and know how to do their job. They approach each customer the same way: with the commitment to deliver a quality experience based on their knowledge and training.",
+      "team": "Experts value security and prefer for things to happen in a predictable way. They are reassured by familiarity. Things that they have personally experienced—that they have seen, heard, smelled, tasted, or touched—are the most appealing to them. History is the best predictor of the future."
+    },
+    {
+      "code": "hiredgun",
+      "headline": "If you want something done without creating hard feelings, give it to the Hired Gun.",
+      "short": "If the Crusader kills for a cause, then the Hired Gun kills for the contract. Hired Guns are charismatic competitors, able to win battles without making enemies. Hired Guns’ confidence, diplomacy, and ability to get a desired outcome without creating ill will makes them among the most effective of negotiators. They have a natural swagger and often display signs of status with their personal style or in the products they purchase (cars, homes, jewelry, etc.).",
+      "words": [
+        "Confident",
+        "Competitive",
+        "Assertive",
+        "Diplomatic",
+        "Personable",
+        "Charismatic",
+        "Results-oriented",
+        "Productive",
+        "Savvy negotiator",
+        "Politically adept",
+        "Suave",
+        "Self-possessed"
+      ],
+      "leaders": "As leaders, Hired Guns inspire others to achieve their goals through a combination of appreciation and freedom. They build strong relationships with their staff, particularly those who perform the best. They respect those who get results. They are comfortable with all forms of feedback and will not suffer fools silently, but rather they will engage them in direct counseling. They will allow some latitude on how followers obtain results, especially the ones who have an established record of achieving goals.",
+      "sales": "Hired Guns are natural sales professionals. They build relationships strategically, investing enough time in getting to know their clients while adeptly transitioning to the selling process. Typically, they are both good closers and adept negotiators. They may struggle with highly technical products or processes but will likely develop other resources within the organization to complement them. They can nimbly handle objections without creating an antagonistic relationship with their customer.",
+      "service": "As service providers, Hired Guns are excellent troubleshooters who can quickly surmise the nature of the problem and solve it. They actively listen to customers’ situations, always with an ear for the key factors that will determine the strategy for addressing their concerns. Hired Guns may lose interest in what they consider unnecessary details or unrelated tangents, but they maintain their service-oriented demeanor.",
+      "team": "Hired Guns are well-liked team members but prefer to work independently of others. This is especially true when they are compensated directly for their efforts. They are most motivated by situations that allow them to get the desired result without too much oversight. They exhibit sufficient tact and diplomacy to minimize any negative morale implications that can arise from their occasional rule transgressions.",
+      "hollywood": "Action movies are the domain of Hired Guns. Like James Bond, Hired Guns are asked to achieve a mission and do so with both efficiency and style. They ooze a sort of sophistication even as they are evading an assassin. This grace under fire helps them maintain the foundation of their relationships with others, even as they compete with them. It is that delicate balance that is the genius of the Hired Gun. Some iconic Hired Guns in Hollywood include Sean Connery, Daniel Craig, Bruce Willis, Dwayne “The Rock” Johnson, Demi Moore, Angelina Jolie, Kathleen Turner, Jennifer Garner, and Jennifer Lawrence’s Katniss Everdeen in The Hunger Games. My personal favorite iconic Hired Gun is Robert Redford’s Butch Cassidy from the movie Butch Cassidy and the Sundance Kid.",
+      "quickref": {
+        "leadership": [
+          "Provides both praise and independence ",
+          "Coaches and counsels equally",
+          "May work outside the rules on occasion",
+          "Values both results and relationships",
+          "Politically adept",
+          "Negotiates assertively",
+          "Values outcomes more than compliance",
+          "Good communicator of strategies",
+          "Interested in morale but not necessarily influenced by it",
+          "Likes incentives that drive performance"
+        ],
+        "sales": [
+          "Consultative approach",
+          "Savvy closer and negotiator",
+          "Navigates organizations deftly",
+          "Builds productive relationships",
+          "May struggle with technical or detailed sales processes",
+          "May not always comply with rules and paperwork"
+        ],
+        "service": [
+          "Exceptional troubleshooter",
+          "Empathizes with customers’ situations",
+          "Listens actively but may become detached when unnecessary details or stories are involved",
+          "Understands ways to get things done outside conventional means",
+          "Very aware of protecting both parties interests",
+          "Resolves complaints quickly",
+          "Exudes confidence"
+        ],
+        "team": [
+          "Well liked by others",
+          "Prefers to be rewarded based on individual achievements",
+          "Gets results without creating ill will",
+          "Knows the rules; may not always follow them if they interfere with the goal",
+          "Works best when appreciated and given latitude to get things done",
+          "More likely to ask for forgiveness than permission",
+          "Aware of the morale of colleagues"
+        ]
+      }
+    },
+    {
+      "code": "loveinterest",
+      "headline": "Ready to let your hair down and have some fun? Call the Love Interest.",
+      "short": "If the Best Friend is the nicest person in the room, then the Love Interest is the most charming. I have to admit that I am a little biased on this particular pattern, and not because it’s mine—it is my wife’s. It is also a common pattern among my friends. Love Interests’ emotional sensitivity combined with their enthusiasm for new things and possibilities just gives them a certain <i>je ne sais quoi</i>. Love Interests are like the world’s public relations/marketing people, running around spreading joy and optimism. They are the people who make the rounds on Monday morning, checking on everyone, finding out how their weekends went. They lift morale by sharing good cheer and enthusiasm. Warriors watch Love Interests’ tireless efforts to lift spirits and wonder, “Do they do anything here, or do they just talk to people all day?” Love Interests respond, “Is your underwear too tight? Lighten up. You’re the buzzkill around here and the reason I need to do this!”",
+      "words": [
+        "Kind",
+        "Enthusiastic",
+        "Diplomatic",
+        "Tactful",
+        "Bubbly",
+        "Gregarious",
+        "Friendly",
+        "Eager",
+        "Optimistic",
+        "Flexible",
+        "Charming"
+      ],
+      "leaders": "As a leader, the Love Interest is a cheerleader. Love Interests create environments that are fun and full of energy. They are attentive to the team’s morale and quick to praise individuals. They introduce new and different ideas to maintain the staff’s excitement. They are great coaches but may struggle with providing critical feedback because they typically dislike conflict or confrontation. They are loyal to both the team and the organization at large. Generally, they create environments that are full of appreciation, new ideas, and excitement, and they are natural team builders.",
+      "sales": "As sales professionals, Love Interests build relationships with their charms. They are enthusiastic about their organization’s products/services and are eager to understand their customer’s needs so that they can make their future better. They find creative ways to help others and are excellent at entertaining. They invest heavily in getting to know their customers as people, particularly during the beginning of the sales process.",
+      "service": "As service providers, Love Interests are upbeat and energetic, particularly when the service is being well received by the customer. They are also adept at finding inventive solutions to the customer’s concerns. However, repeated exposure to negative customer feedback can reduce their motivation. They work best with customers who are also positive and enthusiastic. When in this situation, Love Interest are excellent representatives of the organization.",
+      "team": "As team members, Love Interests are fun to be around, people with whom other team members enjoy working. They thrive in emotionally positive environments that offer new and exciting opportunities. They will be demotivated by monotonous and repetitive work and by rigid or negative people. They also tend to be very social and enjoy coordinating activities that gather the group together.",
+      "hollywood": "Hollywood adores the Love Interest. Every romantic comedy is built on at least one. Think about the standard rom-com: There is always a main character who is very lovable but whose life is slightly chaotic. This character remains optimistic that good things are to come, but the world keeps throwing barriers in the way. But if the Love Interest perseveres with charm and enthusiasm, eventually, his or her dreams come true. For women, there is a long and stellar list of actresses who have portrayed the Love Interest—from Julia Roberts in Pretty Woman and Meg Ryan in When Harry Met Sally all the way through today’s female leads like Anne Hathaway and Drew Barrymore. For men, the iconic Love Interest of the early twentyfirst century was Hugh Grant. You don’t go to a Hugh Grant movie to see him pop a cap in someone’s butt. Hugh is a lover. Other actors who have portrayed the Love Interest role are Hugh Jackman (what’s with the Hugh connection?) and Ryan Reynolds. Cary Grant and Jimmy Stewart are among the classic actors who excelled in the role. It’s a Wonderful Life is the quintessential Love Interest movie.",
+      "quickref": {
+        "leadership": [
+          "Quick to praise",
+          "Lobbies for others",
+          "Reluctant to criticize",
+          "Introduces fun activities and element in workplace",
+          "Flexible",
+          "Promotes high morale",
+          "Takes on new projects with enthusiasm",
+          "Communicates positive messages about change",
+          "May avoid conflict with others",
+          "Promotes the company’s products and/or services"
+        ],
+        "sales": [
+          "Establishes new relationships",
+          "Has many loyal customers",
+          "Very enthusiastic about products and services",
+          "May struggle with closing and dealing with objections",
+          "Great networker",
+          "May not be adept at the structure and paperwork"
+        ],
+        "service": [
+          "Excellent at turning around unhappy customers",
+          "Empathizes with the customer’s situation",
+          "Listens actively",
+          "May be overly influenced by emotional issues",
+          "Finds creative ways to satisfy customer demands",
+          "May be susceptible to burn out if they must continually deal with negative customers",
+          "Gets to know their customers personally"
+        ],
+        "team": [
+          "Well liked by others",
+          "Enthusiastic",
+          "Flexible with new assignment; actually enjoys the variety",
+          "Wants to make their boss happy",
+          "May struggle with jobs that are dull, repetitive, or negative",
+          "Responds to the appreciation of the leader and the opportunity to be involved in fun assignments",
+          "Very aware of the morale of colleagues"
+        ]
+      }
+    },
+    {
+      "code": "mastermind",
+      "words": [
+        "Trust inspiration and inference",
+        "Value imagination and innovation",
+        "Like to learn new skills; become bored with things already mastered",
+        "Often use metaphors to explain their ideas",
+        "Present information in large chunks or in a roundabout manner",
+        "Tend to be impractical dreamers",
+        "Can appear to be disorganized and absentminded Seek change, take risks, and are comfortable in chaos Respond to a salesperson or servicer who is flexible and innovative",
+        "May go off on tangents during conversations",
+        "Will challenge you to provide options or exceptions",
+        "Often very charming and enthusiastic",
+        "May forget some of the content of previous discussions",
+        "Often use language like “What if” or “Would it be possible”",
+        "Are less specific and more general in their questions and expectations"
+      ],
+      "leaders": "Masterminds are visionary leaders. They are comfortable embracing cutting-edge ideas and experiencing the risk associated with being an early adopter. They are entrepreneurial and fearless in taking chances. They like to experiment and engage in new and different ways of thinking. They are capable of gener- ating very innovative ideas and approaches. Their high risk tole- rance can lead to mistakes and create some chaos. They also have a tendency to focus more on the vision than the execution, which can lead to a lack of details and unclear strategies. When working well, the Mastermind-led team is enthusiastic, creative, energized, and inspired to introduce new and different products/ services.",
+      "sales": "Masterminds sell with vision and enthusiasm. They get excited about the possibilities and can instill in your mind an image of a wondrous and desirable future state that does not exist today. They embrace trends and encourage others to be early adopters, too. They are comfortable expanding relationships beyond the customer’s stated needs and love to explore the global view versus the narrow view. It is this passion for possibilities that can lead them to introduce ideas at the expense of closing the original sale. They benefit by being careful not to complicate a transaction with options before securing a commitment on the fundamental deal.",
+      "service": "Masterminds offer creative solutions. They are very comfortable, even excited by, working with exceptional scenarios. They will circumnavigate the rules if necessary to achieve a mutually acceptable resolution. Because they think like an entrepreneur, they are comfortable in creating precedence where no one else has ventured to go.",
+      "team": "Boredom is the Mastermind’s number one enemy. Masterminds crave new and different experiences and are often quite charming and energetic. They will remain engaged and excited in a relationship that offers a continually stimulating environment of options, uniqueness, and enthusiasm."
+    },
+    {
+      "code": "powerbroker",
+      "headline": "A force of nature who understands the vision and has a strategy for realizing it.",
+      "short": "Power Brokers are the franchise players who get things done. They understand the vision and may have had a great deal of influence on its development. More important, they have a clear strategy for realizing this desired future state. They set aggressive goals and expect others to fulfill them. They have the power to push, pull, or drag the team to success. If necessary, they will load the team on their back and carry them to that goal, and when they get there (and they will), they will fire every miserable person who they had to carry. (Kidding. Sorta.) The bottom line—and Power Brokers like the bottom line—is that this style wants to win and will relentlessly pursue victory. Power Brokers are the speedboats on the river of life. Heaven help you if you are in a canoe. There will be waves.",
+      "words": [
+        "Bold",
+        "Strategic",
+        "Productive",
+        "Driven",
+        "Results-oriented",
+        "Impatient",
+        "Forceful",
+        "Direct",
+        "Independent",
+        "Powerful",
+        "Fast",
+        "Confident"
+      ],
+      "leaders": "As leaders, Power Brokers are very comfortable working in the conceptual realm of a desired future state. Once Power Brokers and their teams have defined that vision, the Power Broker is even more at home developing the strategies that will realize it. Power Brokers are direct, logical, demanding, and focused on aggressive goals. They reward others with independence and new challenges. They do not suffer fools gladly and will be assertive, maybe even aggressive, when eliminating poor performers.",
+      "sales": "As sales professionals, Power Brokers may be best working on the big deals. They enjoy seeing the big picture and developing a plan for achieving it. They are less interested in building personal relationships and care more about gaining access to people who can make big decisions. Although their direct style can occasionally hurt feelings, it does make them good at overcoming others’ objections and closing quickly. They are not easily dissuaded from the goal they have set for themselves.",
+      "service": "Power Brokers will be very direct service providers. They can identify a problem immediately and cut through any red tape to get a solution. They may not be particularly likable, but you can’t deny their productivity. Their no-nonsense, to-the-point style will appeal to people who know what they want and expect to receive it without too much small talk and chitchat.",
+      "team": "Power Brokers are natural team leaders in terms of ensuring that the team is making progress to their assigned goal. They can develop a reputation for not being team players; however, this generally comes as a result of Power Brokers not respecting team members for whom they don’t have much use. They expect others to be good at what they do and will gravitate to those who have proved their value.",
+      "hollywood": "Hollywood loves the Power Broker. They chew the scenery. Think Jack Nicholson (“You can’t handle the truth!” [Colonel Nathan R. Jessup from A Few Good Men]), Clint Eastwood (“Feel lucky, punk?” [Dirty Harry]), or Sigourney Weaver (Alien, Aliens). They are bold strokes of bright colors on a blank white canvas. Al Pacino may be the most iconic Power Broker of all time. In my opinion, the three greatest Al Pacino Power Broker movies are The Godfather: Part II, Scarface, and The Devil’s Advocate. Now, I am not comparing the Power Broker to an organized crime boss, a drug trafficker, or Satan. I’m just saying—these are powerful characters.",
+      "quickref": {
+        "leadership": [
+          "Demands results",
+          "Gives independence to high performers; provides criticism and counseling for everyone else",
+          "Not big on praise",
+          "Has a clear vision and strategy",
+          "Writes rules; may not always follow them",
+          "Uninterested in details or unnecessary meetings",
+          "“Tell me what you did, not what you are going to do.”",
+          "Believes success is measured by results ",
+          "May be unaware of morale issues",
+          "Powerful",
+          "Provides direct, concise feedback"
+        ],
+        "sales": [
+          "Problem solver",
+          "Can work around rules to get rapid results",
+          "Strong closer",
+          "Good at identifying and pursuing new clients",
+          "May not enjoy maintaining relationships with unproductive clients",
+          "May put pressure on operations to stretch capacity",
+          "Must be careful not to rush to close rather than invest in relationship"
+        ],
+        "service": [
+          "Tells clients the solution",
+          "Resolves situations quickly",
+          "Willing to think outside the box to get the desired outcome",
+          "May not be sensitive to customers’ emotional state"
+        ],
+        "team": [
+          "Very productive",
+          "May prefer to work alone rather than with a team"
+        ]
+      }
+    },
+    {
+      "code": "romantic",
+      "words": [
+        "Trust their feelings (gut reaction) about situations and people",
+        "Sometimes value other’s needs above their own",
+        "React strongly to emotion",
+        "Have a need to feel committed to another person, idea, or cause",
+        "Consider the impact of their actions on others’ feelings",
+        "Value harmony among people with whom they interact",
+        "Show appreciation of others easily and respond to praise",
+        "Recognize the importance of tact and diplomacy",
+        "Have a strong desire to make a contribution",
+        "Are personable and talkative",
+        "May invest time in conversations unrelated to purpose",
+        "Loyal",
+        "Display an easy smile and laugh",
+        "Rarely criticize and express anger tactfully",
+        "Are “honor bar” negotiators who use their likability to get the best deal"
+      ],
+      "leaders": "Romantics are servant leaders. This means that they’re most effective when they can remove emotional barriers to success and build happy, communicative teams. All Romantics want world peace and work tirelessly to make sure that their teams are emotionally secure. They focus on internal and external customer service and build strong relationships with their team members. Because they value communication, they hold frequent meetings and try to ensure everyone is in the loop. They are exceptional coaches and are quick to praise. They may struggle with delivering critical information and holding people accountable to a high standard because handling conflict can make them uncomfortable. They can also be susceptible to contributing to workplace drama when things are not going well, which can lead to reduced productivity. When working well, their teams are regarded for their high morale, low turnover, cohesiveness, and communication.",
+      "sales": "Romantics develop loyal customers by building relationships. They are likable, care about their clients, and work hard to get them a good deal. They may even sacrifice their own needs for the client’s happiness. They take pride in the number of their customers who have become good friends. Because they care so deeply about their existing clients, they are often most comfort- able working with them rather than seeking new opportunities. This is one of the challenges facing Romantic sales professionals. They can get so caught up in existing relationships that they don’t have time to develop new ones. It is also important that they evaluate their existing relationships based on business potential—not just on the comfort with which they interact.",
+      "service": "Romantics are very good at determining customers’ emotional states. They can tell if a customer is not happy, even if the customer doesn’t articulate it. They often possess the Servant’s Heart—an almost innate desire to make others happy. Their easy smile and diplomacy makes them very effective at defusing problem cus- tomers, and although they may not always be patient, they can use their tact to mask frustrations. They are especially accomplished at active listening and making sure customers have fully vented their frustrations before beginning to fix the problem.",
+      "team": "Romantics are often natural caregivers who want others to be happy. They show appreciation easily but may be a bit reticent to criticize or express frustrations. They often focus on fulfilling others’ needs and may become somewhat resentful if that approach is not reciprocated. They enjoy creating deep, mean- ingful relationships with family and friends."
+    },
+    {
+      "code": "sage",
+      "headline": "The system works; trust the system. The Sage has a system.",
+      "short": "When I think of the Sage, I think of the Japanese term kaizen and the total quality management approach to business excellence that took root in the United States in the 1980s. These philosophies embraced the use of an established process to continuously evaluate and enhance the organization’s systems to achieve greater efficiency and customer satisfaction. As the head of human resources and quality for a hotel management company, I was responsible for learning and applying these concepts. They require knowledge of several very technical approaches that organizations must adopt, apply, and continuously manage. It is a specific way of thinking. It is a system. And the Sage embraces a specific system for continuously enhancing performance.",
+      "words": [
+        "Thorough",
+        "Process-driven",
+        "Accurate",
+        "Productive",
+        "Quality-focused",
+        "Values, controls, and metrics",
+        "Direct",
+        "Consistent",
+        "Compliant",
+        "Efficient",
+        "Detailed",
+        "Competitive"
+      ],
+      "leaders": "As leaders, Sages exhibit the wisdom of their experience and confidence in the systems they’ve developed. Like the corner man for a boxer, they remind others to comply with the process and continuously look for ways to improve others’ performance. They may not be warm and fuzzy, but they respect high performers who produce quality work.",
+      "sales": "As sales professionals, Sages approach their markets systematically. They work best within a clearly articulated strategy and structure that provides them with the foundation to work their territories. They have great depth of knowledge about their products and services and use this to assertively move the sales transaction toward closure.",
+      "service": "As service providers, Sages are the consummate processdriven problem solvers. Their familiarity with the organization’s offerings—combined with compliance to procedures—makes them low-risk, high-success troubleshooters. They may struggle with unique scenarios, but they will endeavor to learn the details to find a successful outcome.",
+      "team": "Sages are steady, reliable, consistent, and determined team members. You can count on them to generate dependable results using existing organizational processes. They rarely make mistakes, and they excel in environments that value compliance and productivity.",
+      "hollywood": "The two Hollywood actors that come to mind for me when discussing the Sage are Gene Hackman and Dame Judi Dench. Gene, particularly in the movies Hoosiers and The French Connection, perfectly exhibited that plugger mentality. Sages may not be flashy, but they achieve success using a dogged persistence and belief in their own knowledge. In her role as M in the reboot of the James Bond movies, Judi displayed many of these same qualities. Despite criticism of her management style, she remained steadfast in her approach and her practices were later vindicated. A more comic take on this style was provided by Robert De Niro in the movie Meet the Parents. His character, Jack Byrnes, describes his preference for cats over dogs to his future son-in-law with this line: “You see, Greg, when you yell at a dog, his tail will go between his legs and cover his genitals, his ears will go down. A dog is very easy to break, but cats make you work for their affection. They don’t sell out the way dogs do.” There’s a person who has a very specific approach to pet selection. And, for the record, I prefer dogs.",
+      "quickref": {
+        "leadership": [
+          "Committed to quality",
+          "Demands efficiency and continuous improvement",
+          "Rewards compliance and productivity",
+          "Provides no-nonsense feedback",
+          "Provides consistent and reliable management",
+          "Not particularly warm and fuzzy"
+        ],
+        "sales": [
+          "Works the system",
+          "Organized in his or her approach to the market",
+          "Has great depth of knowledge of product and process",
+          "Productive plugger",
+          "Not generally a big relationship builder"
+        ],
+        "service": [
+          "Has thorough knowledge of products and services",
+          "Complies with organizational procedures",
+          "Very effective with common situations",
+          "May struggle when new products or services are introduced"
+        ],
+        "team": [
+          "Dependable producer",
+          "Follows rules",
+          "Works best in structured situations",
+          "Responds well to training",
+          "Once fully competent, can be trusted to produce accurate work",
+          "May resist change that does not appear to be well thought out"
+        ]
+      }
+    },
+    {
+      "code": "socialreformer",
+      "headline": "I have a dream! And it will benefit the people.",
+      "short": "The Social Reformer is like a beloved king or queen. Social Reformers have a vision for the future that will enhance the lives of their people. It will make them healthier, wealthier, and happier. All you need to do is believe. They simply ask for a passionate commitment to their ideas. Their conceptual mind and emotional sensitivity make them charismatic leaders who others want to follow. They are tactful and diplomatic and share a future that is optimistic and appealing. What’s not to like? Well, there can be a little issue with details and strategies.",
+      "words": [
+        "Passionate",
+        "Caring",
+        "Visionary",
+        "Diplomatic",
+        "Charming",
+        "Conceptual",
+        "Empathetic",
+        "Risk tolerant",
+        "Enthusiastic",
+        "Fun-loving",
+        "Inspirational",
+        "Dreamer"
+      ],
+      "leaders": "As leaders, Social Reformers are change agents. They imagine a better future for their employees and customers. They are comfortable taking chances and are eager to learn, even from mistakes. They are charismatic and well liked and are rarely annoyed by others—unless, of course, it’s a malcontent or a nonbeliever.",
+      "sales": "As sales professionals, Social Reformers are both enthusiastic promoters of their products and services and adept relationship builders. They thrive in loosely defined situations, so they often seek new markets or customer bases. They find creative, appealing ways to position their goods and maintain optimism even when meeting with initial barriers.",
+      "service": "Social Reformers are empathetic service providers. They use their energy and positive outlook to exude a can-do demeanor. This enthusiasm is often contagious and creates delighted customers. They may not always comply with policies, but this is generally because they’re unaware they even existed.",
+      "team": "As team members, Social Reformers are charismatic colleagues who care about the morale that surrounds them. They are comfortable offering ideas for enhancing the workplace and improving the team’s situation. They loved to be inspired and to be helpful to others.",
+      "hollywood": "Social Reformers believe in people and are passionate, charismatic leaders who are fully committed to their dreams. Cate Blanchett (Queen Elizabeth), Meryl Streep (Karen Silkwood), and Julia Roberts (Erin Brockovich) have all played the role. Male Social Reformers include Denzel Washington (Malcolm X), Robert Redford (Henry Brubaker), and Peter O’Toole (Lawrence of Arabia). Each of these performance marked by a main character committed to social change.",
+      "quickref": {
+        "leadership": [
+          "Has a high risk tolerance",
+          "A visionary for social issues",
+          "Compassionate, particularly for believers",
+          "Appreciates others",
+          "More focused on desired future state than on structure",
+          "An agent for change, especially to benefit people"
+        ],
+        "sales": [
+          "Sells with enthusiasm",
+          "Paints a picture of the impact of his or her product and services on people",
+          "Builds relationships",
+          "Comfortable finding new markets",
+          "Passionate about what he or she represents"
+        ],
+        "service": [
+          "Comfortable working with a wide variety of customers",
+          "Empathetic to others",
+          "Creative problem solver",
+          "May take unconventional path to achieve result"
+        ],
+        "team": [
+          "Enthusiastic",
+          "Team player",
+          "Contributes ideas",
+          "Works to enhance morale",
+          "Comfortable in loosely defined situations",
+          "Loves new projects"
+        ]
+      }
+    },
+    {
+      "code": "specialist",
+      "headline": "Perfection. No surprises. They like right and on time.",
+      "short": "They are, in a word, perfect. That’s in their delusion, of course. Specialists take great pride in both the quality of their work and their ability to deliver it on time. If you liked their work yesterday, you will like it today and you will like it tomorrow. If you didn’t like their work yesterday, you won’t like it today and you won’t like it tomorrow. Maybe you need to change your expectations. One of the most reliable performers, they are rigidly compliant to what they believe to be the best practices for their craft.",
+      "words": [
+        "Compliant",
+        "Knowledgeable",
+        "Strict",
+        "Detailed",
+        "Perfectionist",
+        "Process-oriented",
+        "Quality-focused",
+        "Direct",
+        "Reliable",
+        "Stubborn",
+        "Correct",
+        "Trustworthy"
+      ],
+      "leaders": "As leaders, Specialists are all about quality and structure. They set up systems meant to eliminate mistakes and expect others to comply with them without exception. They use their great depth of knowledge to mentor others on their craft, and they command respect because of their consistency and reliability.",
+      "sales": "Specialist sales professionals work the system using detailed product knowledge and exceptional ability to identify problems and offer credible solutions. They keep their promises, accurately depict their capabilities, and build relationships based on trust.",
+      "service": "Specialists are cautious but results-oriented service providers who thoroughly explain the process and do exactly what they tell you they will do. They take pride in both doing things correctly and being efficient.",
+      "team": "As team members, Specialists are no-nonsense contributors who thrive in tightly defined roles. They are compliant to the rules and committed to knowing everything about their jobs. They can be trusted to deliver a high quality of work in an expedited manner.",
+      "hollywood": "Hollywood generally casts the Specialist as a role player. Think of the safe cracker or the computer hacker in a crime caper or the munitions expert in a war movie. There have been leading roles, too. Jeremy Renner’s version of Bourne and Jodie Foster in Silence of the Lambs are great examples of Specialists. Harvey Keitel as Winston “The Wolf” Wolfe in Pulp Fiction is iconic in the role as the Specialist. Gillian Anderson also portrayed one in The X-Files with her no-nonsense, well-reasoned character Dana Scully.",
+      "quickref": {
+        "leadership": [
+          "Very structured",
+          "Expects compliance to policies and systems",
+          "Demands quality",
+          "Is efficient and productive",
+          "Mentors others with knowledge",
+          "Holds people accountable",
+          "Rewards others with security and space"
+        ],
+        "sales": [
+          "Understands the capabilities of products and services",
+          "Keeps promises",
+          "Carefully evaluates customers’ needs",
+          "Works a proven sales process",
+          "Completes paperwork accurately and on time"
+        ],
+        "service": [
+          "Understands the capabilities of products and services",
+          "Keeps promises",
+          "Carefully evaluates customers’ needs",
+          "Works a proven sales process",
+          "Completes paperwork accurately and on time"
+        ],
+        "team": [
+          "Steady, consistent, and reliable performer",
+          "Rarely makes mistakes",
+          "Thrives in well-defined situations",
+          "Comfortable with repetitive tasks"
+        ]
+      }
+    },
+    {
+      "code": "voiceofreason",
+      "headline": "The steady Eddie who shows his or her compassion by teaching the correct way to avoid mistakes.",
+      "short": "Voices of Reason are like math teachers. They are very good at explaining technical information or policies to others in a way that they understand. They care about others and provide them with the rules and details that will keep them from getting in trouble. They hold others accountable for compliance but do so with patience and tact. Although you may not realize how much they care, rest assured that compassion for others lies under their unwavering professionalism.",
+      "words": [
+        "Empathetic",
+        "Cautious",
+        "Detailed",
+        "Diplomatic",
+        "Reliable",
+        "Technical",
+        "Compliant",
+        "Appropriate",
+        "Consistent",
+        "Professional",
+        "Patient",
+        "Conscientious"
+      ],
+      "leaders": "As leaders, Voices of Reason are technically proficient and committed to ensuring each team member knows and complies with the organization’s policies, procedures, and processes. They often have depth of knowledge about the business’s core functions and an excellent demeanor for delivering detailed training. They hold others accountable using a patient and tactful approach to employee coaching and counseling.",
+      "sales": "As sales professionals, Voices of Reason will follow a prescribed process for educating their customers about the benefits of their products and service and will develop respected relationships within their industry. They will retain a large portion of the customer base they capture but may need support in finding new business.",
+      "service": "As service providers, Voices of Reason will have a comprehensive understanding of the products and services. They use this to both troubleshoot customer problems and better explain the features to facilitate greater client satisfaction. They will be compliant to company policies and will work within the prescribed level of authority to identify solutions to customer concerns.",
+      "team": "As team members, Voices of Reason are well-respected, accurate, and knowledgeable contributors who strive to follow the rules and generate few mistakes. They care about the quality of their work, and their contentious nature may cause them to become defensive when criticized. They take their work seriously.",
+      "hollywood": "Although Voices of Reason may not be flashy characters in Hollywood, they are often portrayed as gracious, elegant, and appropriate. Tom Hanks played the epitome of this character in Saving Private Ryan. Cary Grant and Matt Damon have also captured the essence of the Voice of Reason on screen. For women, Gwyneth Paltrow, Audrey Hepburn, and Jodie Foster all have embodied the intellect, grace, and refinement that are hallmarks of this style.",
+      "quickref": {
+        "leadership": [
+          "Structured",
+          "Technical educator",
+          "Compliant to policies, processes, and systems",
+          "Appreciative of others",
+          "Values accuracy and quality",
+          "Uncomfortable with chaos",
+          "Risk averse",
+          "Thorough communicator"
+        ],
+        "sales": [
+          "Builds relationships based on respect",
+          "Has deep knowledge of products and services",
+          "Steady",
+          "Maintains existing client base",
+          "Provides accurate expectations to clients"
+        ],
+        "service": [
+          "Provides accurate information",
+          "Understands how products and services work",
+          "Teaches others how to use products and services",
+          "Cares about client satisfaction",
+          "Stays within assigned level of authority"
+        ],
+        "team": [
+          "Reliable performer",
+          "Respected colleague",
+          "Rarely makes mistakes",
+          "Uncomfortable with criticism",
+          "Prefers highly structured and appreciative environments",
+          "Good team player"
+        ]
+      }
+    },
+    {
+      "code": "warrior",
+      "words": [
+        "Trust logic and efficiency",
+        "Are competitive",
+        "Have a strong desire to improve",
+        "Are analytical",
+        "Value logic, justice, and fairness",
+        "Consider truth more important than tact",
+        "Believe feelings are valid only if they are logical",
+        "Are often seen as driven or extremely goal-oriented",
+        "Focus on enhancing rather than praising",
+        "Seem always to have a plan",
+        "Rarely act without a purpose",
+        "Get to the point quickly",
+        "May appear more irritated than they are, especially to Romantics",
+        "Talk fast",
+        "Want answers immediately",
+        "May expect things to be handled on their terms",
+        "Negotiate assertively",
+        "Come across as very intelligent",
+        "Not overly friendly, more intense"
+      ],
+      "leaders": "Warriors are results-oriented leaders. They like to establish aggressive goals and then achieve them. They tend to be highly productive and value people who get things done. They are aware of the rules and may have even written them, but they do not let these rules interfere with the achievement of the goal. They reward people by leaving them alone and believe that “no news is good news.” They often engage in a critical analysis of situations, looking for ways to enhance things. As a result, employees receive more criticism than praise and tend to see the Warrior as demanding or even angry. This can create morale concerns and increase turnover. When working well, their teams are noted for their high productivity, efficiency, and continual improvement.",
+      "sales": "Warriors are closers. They like to solve problems. They are most adept at analyzing a customer’s need and offering solutions that will benefit the customer’s situation. They are assertive negotia- tors and are very effective at coming to agreements that fiscally benefit their organization. Their efficient style ensures that they move quickly through the sales process to an outcome. They are also good at giving and receiving referrals and are often more comfortable in getting new business than maintaining existing relationships. Contrary to Romantics, Warriors can get so focused on hunting for new opportunities that they forget to farm the existing ones.",
+      "service": "Warriors are good troubleshooters. They like to assess the situation quickly, determine the necessary resolution, and imple- ment it. They recognize what needs to be done very quickly. They may not spend adequate time listening to the customer’s frustration, simply because they have already figured out the problem and know how to solve it. Because they value time, they tend to work quickly to get the desired result.",
+      "team": "Warriors are natural problem solvers. They value competence and allow others their space as long as they have proved to be good at what they do. Their strategic mind can make them excellent planners. They are comfortable with status because it reflects the fact that they are successful (winning). They appreciate confidence in others and respect those with whom they can have a direct conversation."
+    }
+  ],
+  "items": [
+    {
+      "seq": 1,
+      "a": "Your favorite restaurant or vacation spot",
+      "b": "Family and/or friends",
+      "c": "A new place or situation",
+      "d": "A competitive and/or learning situation"
+    },
+    {
+      "seq": 2,
+      "a": "A well-structured company",
+      "b": "A people-oriented company",
+      "c": "A creative company",
+      "d": "A fast-growing company"
+    },
+    {
+      "seq": 3,
+      "a": "A job or project that is well organized",
+      "b": "A job or project that benefits others",
+      "c": "A job or project that is different and exciting",
+      "d": "A job or project that is mentally stimulating"
+    },
+    {
+      "seq": 4,
+      "a": "A dependable relationship",
+      "b": "A meaningful relationship",
+      "c": "An exciting relationship",
+      "d": "A respect-based relationship"
+    },
+    {
+      "seq": 5,
+      "a": "Rewards based on quality",
+      "b": "Rewards based on teamwork",
+      "c": "Rewards based upon originality of ideas",
+      "d": "Rewards based upon merit and achievement"
+    },
+    {
+      "seq": 6,
+      "a": "Feeling secure",
+      "b": "Being appreciated",
+      "c": "Doing something interesting",
+      "d": "Being independent"
+    },
+    {
+      "seq": 7,
+      "a": "A well-played ball game",
+      "b": "A moving emotional experience",
+      "c": "A new and different experience",
+      "d": "A competitive experience"
+    },
+    {
+      "seq": 8,
+      "a": "A task that one can see or touch",
+      "b": "A task that makes one feel good",
+      "c": "A task that calls upon one’s imagination",
+      "d": "A task that requires logical reasoning"
+    },
+    {
+      "seq": 9,
+      "a": "Consistent work",
+      "b": "Harmonious work",
+      "c": "Changing work",
+      "d": "Efficient work"
+    },
+    {
+      "seq": 10,
+      "a": "Being accurate",
+      "b": "Being compassionate",
+      "c": "Being innovative",
+      "d": "Being productive"
+    },
+    {
+      "seq": 11,
+      "a": "A meeting to discuss details",
+      "b": "A meeting to discuss feelings",
+      "c": "A meeting to discuss ideas",
+      "d": "A meeting to discuss results"
+    },
+    {
+      "seq": 12,
+      "a": "Knowing the directions",
+      "b": "Working with a great team",
+      "c": "Discovering something new",
+      "d": "Being done with a project"
+    }
+  ]
+}
