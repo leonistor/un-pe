@@ -4,6 +4,7 @@ import { useTestState } from "@/hooks/use-test-state"
 import { calculateScores, determineStyle, findDescription, findStyle } from "@/lib/scoring"
 import personalityData from "@/lib/personality_data.json"
 import { Intro } from "@/components/intro"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { QuestionCard } from "@/components/question-card"
 import { ResultsView } from "@/components/results-view"
 
@@ -96,9 +97,7 @@ export function App() {
             <span className="text-sm font-medium">Understanding People</span>
           )}
         </div>
-        <span className="text-xs text-muted-foreground">
-          Press <kbd className="rounded border border-border px-1 font-mono text-[10px]">d</kbd> to toggle dark mode
-        </span>
+        <ThemeToggle />
       </div>
 
       {view === "intro" && (
