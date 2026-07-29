@@ -1,12 +1,39 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 interface IntroProps {
-  onStart: () => void
+  onStart: (name: string) => void
   hasSavedProgress: boolean
   onResume: () => void
 }
 
+const NICKNAMES = [
+  "Captain Clicks",
+  "Ranking Raccoon",
+  "The Personality Pirate",
+  "Quizzy McQuizface",
+  "Data Destroyer",
+  "The Rankinator",
+  "Mystery McMysteryface",
+  "The Profile Pundit",
+  "Sir Sorts-a-Lot",
+  "The Trait Detective",
+  "Lady Leader",
+  "The Pattern Seeker",
+]
+
+function randomNickname(): string {
+  return NICKNAMES[Math.floor(Math.random() * NICKNAMES.length)]
+}
+
 export function Intro({ onStart, hasSavedProgress, onResume }: IntroProps) {
+  const [name, setName] = useState("")
+
+  const handleStart = () => {
+    onStart(name.trim() || randomNickname())
+  }
+
   return (
     <div className="flex max-w-prose flex-col gap-6">
       <div>
@@ -27,16 +54,25 @@ export function Intro({ onStart, hasSavedProgress, onResume }: IntroProps) {
         and so on. Your results will reveal your personality style.
       </p>
 
+      <Input
+        placeholder="Your name (or leave blank for a surprise nickname)"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") handleStart()
+        }}
+      />
+
       <div className="flex gap-3">
         {hasSavedProgress ? (
           <>
             <Button onClick={onResume}>Resume Test</Button>
-            <Button variant="outline" onClick={onStart}>
+            <Button variant="outline" onClick={handleStart}>
               Start Over
             </Button>
           </>
         ) : (
-          <Button onClick={onStart}>Start Test</Button>
+          <Button onClick={handleStart}>Start Test</Button>
         )}
       </div>
     </div>

@@ -48,6 +48,7 @@ export type Answers = Partial<Record<number, Partial<Record<ColumnKey, Rank>>>>
 export type ViewState = "intro" | "test" | "results"
 
 export interface TestState {
+  name: string
   currentQuestion: number
   answers: Answers
   completed: boolean

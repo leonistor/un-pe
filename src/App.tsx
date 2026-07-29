@@ -11,6 +11,7 @@ import { ResultsView } from "@/components/results-view"
 export function App() {
   const {
     state,
+    setName,
     startTest,
     setRank,
     removeRank,
@@ -28,10 +29,14 @@ export function App() {
 
   const items = personalityData.items
 
-  const handleStart = useCallback(() => {
-    startTest()
-    setView("test")
-  }, [startTest])
+  const handleStart = useCallback(
+    (name: string) => {
+      startTest()
+      setName(name)
+      setView("test")
+    },
+    [startTest, setName],
+  )
 
   const handleResume = useCallback(() => {
     setView("test")
@@ -123,6 +128,7 @@ export function App() {
 
       {view === "results" && result && (
         <ResultsView
+          name={state.name}
           style={result.style}
           description={result.description}
           onRetake={handleRetake}

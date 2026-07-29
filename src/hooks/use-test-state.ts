@@ -32,16 +32,20 @@ function clearState() {
 export function useTestState() {
   const [state, setState] = useState<TestStateType>(() => {
     const saved = loadState()
-    if (saved && !saved.completed) return saved
-    return { currentQuestion: 0, answers: {}, completed: false }
+    if (saved && !saved.completed) return { ...saved, name: saved.name ?? "" }
+    return { name: "", currentQuestion: 0, answers: {}, completed: false }
   })
 
   useEffect(() => {
     saveState(state)
   }, [state])
 
+  const setName = useCallback((name: string) => {
+    setState((prev) => ({ ...prev, name }))
+  }, [])
+
   const startTest = useCallback(() => {
-    setState({ currentQuestion: 0, answers: {}, completed: false })
+    setState({ name: "", currentQuestion: 0, answers: {}, completed: false })
   }, [])
 
   const setRank = useCallback(
@@ -94,7 +98,7 @@ export function useTestState() {
 
   const retake = useCallback(() => {
     clearState()
-    setState({ currentQuestion: 0, answers: {}, completed: false })
+    setState({ name: "", currentQuestion: 0, answers: {}, completed: false })
   }, [])
 
   const getRankedCount = useCallback(
@@ -121,6 +125,7 @@ export function useTestState() {
 
   return {
     state,
+    setName,
     startTest,
     setRank,
     removeRank,

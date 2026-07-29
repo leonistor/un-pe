@@ -3,12 +3,14 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 interface ResultsViewProps {
+  name: string
   style: PeopleStyle
   description: StyleDescription
   onRetake: () => void
 }
 
 export function ResultsView({
+  name,
   style,
   description,
   onRetake,
@@ -17,7 +19,7 @@ export function ResultsView({
     <div className="flex max-w-prose flex-col gap-8">
       <div>
         <p className="text-xs uppercase tracking-wider text-muted-foreground">
-          Your personality style
+          {name}, your personality style
         </p>
         <h1 className="mt-1 text-3xl font-medium">{style.name}</h1>
         {description.headline && (
