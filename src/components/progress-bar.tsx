@@ -1,3 +1,5 @@
+import { Progress } from "@/components/ui/progress"
+
 interface ProgressBarProps {
   current: number
   total: number
@@ -8,12 +10,7 @@ export function ProgressBar({ current, total }: ProgressBarProps) {
 
   return (
     <div className="flex items-center gap-3">
-      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-muted">
-        <div
-          className="h-full rounded-full bg-primary transition-all duration-300"
-          style={{ width: `${pct}%` }}
-        />
-      </div>
+      <Progress value={pct} className="flex-1" />
       <span className="shrink-0 text-xs tabular-nums text-muted-foreground">
         {current + 1} / {total}
       </span>
