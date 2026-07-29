@@ -1,5 +1,7 @@
 # understanding people personality test
 
+**Public testing site:** <https://parsedw.ink/un-pe/>
+
 Personality test based on [Dave Mitchell's](http://www.theleadershipdifference.com/who/dave-mitchell/) book ["The Power of Understanding People"](http://www.amazon.com/Power-Understanding-People-Strengthening-Organizational-ebook/dp/B00E1JO4Z8)
 
 The user will be asked for their ranked preferences to 12 sets of 4 statements, and the results will be used to determine their personality style.
