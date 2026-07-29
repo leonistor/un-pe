@@ -1,5 +1,6 @@
 import type { PeopleStyle, StyleDescription } from "@/types"
 import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 interface ResultsViewProps {
   style: PeopleStyle
@@ -139,7 +140,8 @@ export function ResultsView({
         )}
       </div>
 
-      <div className="border-t border-border pt-6">
+      <Separator />
+      <div className="pt-6">
         <Button onClick={onRetake} variant="outline">
           Retake Test
         </Button>

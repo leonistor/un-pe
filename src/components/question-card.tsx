@@ -1,5 +1,6 @@
 import { useCallback } from "react"
 import type { ColumnKey, Item, Rank } from "@/types"
+import { Button } from "@/components/ui/button"
 import { Statement } from "./statement"
 import { ProgressBar } from "./progress-bar"
 
@@ -62,33 +63,22 @@ export function QuestionCard({
       </div>
 
       <div className="flex items-center justify-between">
-        <button
-          type="button"
+        <Button
+          variant="ghost"
           onClick={onPrev}
           disabled={currentIndex === 0}
-          className="text-sm text-muted-foreground hover:text-foreground disabled:pointer-events-none disabled:opacity-30"
         >
           Back
-        </button>
+        </Button>
 
         {currentIndex < total - 1 ? (
-          <button
-            type="button"
-            onClick={onNext}
-            disabled={!allRanked}
-            className="rounded-lg bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground hover:bg-primary/80 disabled:pointer-events-none disabled:opacity-40"
-          >
+          <Button onClick={onNext} disabled={!allRanked}>
             Next
-          </button>
+          </Button>
         ) : (
-          <button
-            type="button"
-            onClick={onNext}
-            disabled={!allRanked}
-            className="rounded-lg bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground hover:bg-primary/80 disabled:pointer-events-none disabled:opacity-40"
-          >
+          <Button onClick={onNext} disabled={!allRanked}>
             See Results
-          </button>
+          </Button>
         )}
       </div>
     </div>
