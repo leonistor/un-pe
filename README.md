@@ -4,6 +4,12 @@ Personality test based on [Dave Mitchell's](http://www.theleadershipdifference.c
 
 The user will be asked for their ranked preferences to 12 sets of 4 statements, and the results will be used to determine their personality style.
 
+## Documentation
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions.
+
+See [DEV.md](DEV.md) for dev tasks.
+
 ## data
 
 The data for the personality test is defined in `src/lib/personality_data.json`:
