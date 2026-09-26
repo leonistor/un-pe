@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon, MonitorIcon } from "lucide-react"
+import { SunIcon, MoonIcon, MonitorIcon } from "@phosphor-icons/react"
 import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import {
