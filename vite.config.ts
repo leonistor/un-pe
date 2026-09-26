@@ -1,6 +1,7 @@
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
+import { cn } from "cn/vite"
 import { defineConfig } from "vite"
 import { VitePWA } from "vite-plugin-pwa"
 
@@ -13,6 +14,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    cn({ content: ["src/**/*.{ts,tsx}"], out: "src/lib/cn-tables.ts" }),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["personality-icon.svg"],
