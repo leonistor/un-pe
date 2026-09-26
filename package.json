@@ -7,8 +7,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "prebuild": "cn build --content \"src/**/*.{ts,tsx}\" -o src/lib/cn-tables.ts",
-    "pretypecheck": "cn build --content \"src/**/*.{ts,tsx}\" -o src/lib/cn-tables.ts",
     "lint": "oxlint",
     "format": "oxfmt",
     "typecheck": "tsc --noEmit",
