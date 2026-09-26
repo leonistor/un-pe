@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Playwright
+test-results
+playwright-report
+blob-report
+
+# OpenCode / oh-my-agents session state
+.omo/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
