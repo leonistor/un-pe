@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["eslint", "typescript", "react", "oxc"],
+  "jsPlugins": ["@shadcn/lint"],
   "categories": {
     "correctness": "error"
   },
@@ -11,6 +12,8 @@
   "rules": {
     "react/rules-of-hooks": "error",
     "react/exhaustive-deps": "warn",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+    "react/only-export-components": ["warn", { "allowConstantExport": true }],
+    "shadcn/no-raw-colors": "warn",
+    "shadcn/no-arbitrary-values": "warn"
   }
 }
