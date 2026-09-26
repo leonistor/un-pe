@@ -8,6 +8,28 @@
 @theme inline {
     --font-heading: var(--font-sans);
     --font-sans: 'Libre Franklin Variable', sans-serif;
+
+    /*
+     * Fluid, semantic type scale. Sizes are named by intent (not by px) and
+     * scale continuously with the viewport, so headings need no breakpoint
+     * variants. Used via `text-hero`, `text-title`, `text-heading`,
+     * `text-body`, `text-eyebrow`.
+     */
+    --text-eyebrow: 0.75rem;
+    --text-eyebrow--line-height: 1rem;
+    --text-eyebrow--letter-spacing: 0.08em;
+    --text-eyebrow--font-weight: 500;
+    --text-body: 0.9375rem;
+    --text-body--line-height: 1.6;
+    --text-heading: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+    --text-heading--line-height: 1.35;
+    --text-heading--font-weight: 500;
+    --text-title: clamp(1.25rem, 1.1rem + 1vw, 1.75rem);
+    --text-title--line-height: 1.2;
+    --text-hero: clamp(2rem, 1.5rem + 3vw, 3.25rem);
+    --text-hero--line-height: 1.05;
+    --text-hero--letter-spacing: -0.02em;
+
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,73 +70,81 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/*
+ * Light theme — zinc grays, deep-blue primary, light-blue secondary.
+ * All text pairs verified against WCAG AA/AAA (see DESIGN.md).
+ */
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+    --background: oklch(0.985 0 0);
+    --foreground: oklch(0.21 0.006 285.885);
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
+    --card-foreground: oklch(0.21 0.006 285.885);
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.21 0.006 285.885);
+    --primary: oklch(0.45 0.18 264);
     --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.95 0.03 262);
+    --secondary-foreground: oklch(0.4 0.15 264);
+    --muted: oklch(0.967 0.001 286.375);
+    --muted-foreground: oklch(0.552 0.016 285.938);
+    --accent: oklch(0.95 0.03 262);
+    --accent-foreground: oklch(0.4 0.15 264);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
+    --border: oklch(0.92 0.004 286.32);
+    --input: oklch(0.92 0.004 286.32);
+    --ring: oklch(0.55 0.16 264);
+    --chart-1: oklch(0.55 0.16 264);
+    --chart-2: oklch(0.65 0.13 264);
+    --chart-3: oklch(0.75 0.09 264);
+    --chart-4: oklch(0.85 0.05 264);
+    --chart-5: oklch(0.92 0.02 264);
+    --radius: 1rem;
     --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.21 0.006 285.885);
+    --sidebar-primary: oklch(0.45 0.18 264);
     --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+    --sidebar-accent: oklch(0.95 0.03 262);
+    --sidebar-accent-foreground: oklch(0.4 0.15 264);
+    --sidebar-border: oklch(0.92 0.004 286.32);
+    --sidebar-ring: oklch(0.55 0.16 264);
 }
 
+/*
+ * Dark theme — zinc surfaces, brighter blue primary for contrast on dark.
+ * All text pairs verified against WCAG AA/AAA (see DESIGN.md).
+ */
 .dark {
-    --background: oklch(0.145 0 0);
+    --background: oklch(0.141 0.005 285.823);
     --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
+    --card: oklch(0.21 0.006 285.885);
     --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
+    --popover: oklch(0.21 0.006 285.885);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.62 0.19 264);
+    --primary-foreground: oklch(0.141 0.005 285.823);
+    --secondary: oklch(0.27 0.03 264);
+    --secondary-foreground: oklch(0.92 0.03 262);
+    --muted: oklch(0.274 0.006 286.033);
+    --muted-foreground: oklch(0.705 0.015 286.067);
+    --accent: oklch(0.27 0.03 264);
+    --accent-foreground: oklch(0.92 0.03 262);
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 10%);
     --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
+    --ring: oklch(0.62 0.19 264);
+    --chart-1: oklch(0.62 0.19 264);
+    --chart-2: oklch(0.55 0.16 264);
+    --chart-3: oklch(0.45 0.18 264);
+    --chart-4: oklch(0.37 0.13 264);
+    --chart-5: oklch(0.3 0.08 264);
+    --sidebar: oklch(0.21 0.006 285.885);
     --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.62 0.19 264);
+    --sidebar-primary-foreground: oklch(0.141 0.005 285.823);
+    --sidebar-accent: oklch(0.27 0.03 264);
+    --sidebar-accent-foreground: oklch(0.92 0.03 262);
     --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --sidebar-ring: oklch(0.62 0.19 264);
 }
 
 @layer base {
@@ -127,4 +157,34 @@
   html {
     @apply font-sans;
     }
+}
+
+/*
+ * Semantic component classes. Named for this project's domain and used to
+ * replace repeated utility strings; keep this set small and intentional.
+ */
+@layer components {
+  /* Outer page frame. Width is shared by header and main. */
+  .app-shell {
+    @apply mx-auto flex min-h-dvh w-full max-w-3xl flex-col;
+  }
+  /* Sticky, blurred top bar carrying the brand lockup and theme toggle. */
+  .app-header {
+    @apply sticky top-0 z-10 flex items-center justify-between border-b border-border/60 bg-background/80 px-4 py-3 backdrop-blur-md sm:px-6 lg:px-8;
+  }
+  .app-main {
+    @apply flex-1 px-4 py-6 sm:px-6 sm:py-8 lg:px-8;
+  }
+  /* Small uppercase label above a heading. */
+  .eyebrow {
+    @apply text-eyebrow uppercase text-muted-foreground;
+  }
+  /* Standard muted body copy. */
+  .prose-muted {
+    @apply text-body leading-relaxed text-muted-foreground;
+  }
+  /* Section heading used throughout the results view. */
+  .section-title {
+    @apply mb-2 text-heading text-foreground;
+  }
 }

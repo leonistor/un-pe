@@ -14,10 +14,10 @@ export function Statement({ text, column, rank, onClick }: StatementProps) {
       type="button"
       onClick={() => onClick(column)}
       className={cn(
-        "flex w-full items-center gap-3 rounded-lg border p-3 text-left text-sm transition-all",
+        "flex w-full items-center gap-3 rounded-lg border p-3.5 text-left text-body transition-all outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
         rank
           ? "border-primary bg-primary/5 text-foreground"
-          : "border-border bg-background text-muted-foreground hover:border-muted-foreground/30 hover:text-foreground",
+          : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:bg-accent/50 hover:text-foreground",
       )}
     >
       <span

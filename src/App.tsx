@@ -4,6 +4,7 @@ import { useTestState } from "@/hooks/use-test-state"
 import { calculateScores, determineStyle, findDescription, findStyle } from "@/lib/scoring"
 import personalityData from "@/lib/personality_data.json"
 import { Intro } from "@/components/intro"
+import { Logo } from "@/components/logo"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { QuestionCard } from "@/components/question-card"
 import { ResultsView } from "@/components/results-view"
@@ -95,45 +96,43 @@ export function App() {
   const currentAnswers = state.answers[currentItem?.seq] ?? {}
 
   return (
-    <div className="mx-auto flex min-h-svh max-w-lg flex-col gap-8 p-6">
-      <div className="flex items-center justify-between">
-        <div>
-          {view !== "intro" && (
-            <span className="text-sm font-medium">Understanding People</span>
-          )}
-        </div>
+    <div className="app-shell">
+      <header className="app-header">
+        <Logo size={22} />
         <ThemeToggle />
-      </div>
+      </header>
 
-      {view === "intro" && (
-        <Intro
-          onStart={handleStart}
-          hasSavedProgress={Object.keys(state.answers).length > 0 && !state.completed}
-          onResume={handleResume}
-        />
-      )}
+      <main className="app-main">
+        {view === "intro" && (
+          <Intro
+            onStart={handleStart}
+            hasSavedProgress={Object.keys(state.answers).length > 0 && !state.completed}
+            onResume={handleResume}
+          />
+        )}
 
-      {view === "test" && currentItem && (
-        <QuestionCard
-          item={currentItem}
-          currentIndex={state.currentQuestion}
-          total={items.length}
-          ranks={currentAnswers}
-          onRank={handleRank}
-          onRemoveRank={handleRemoveRank}
-          onNext={handleNext}
-          onPrev={handlePrev}
-        />
-      )}
+        {view === "test" && currentItem && (
+          <QuestionCard
+            item={currentItem}
+            currentIndex={state.currentQuestion}
+            total={items.length}
+            ranks={currentAnswers}
+            onRank={handleRank}
+            onRemoveRank={handleRemoveRank}
+            onNext={handleNext}
+            onPrev={handlePrev}
+          />
+        )}
 
-      {view === "results" && result && (
-        <ResultsView
-          name={state.name}
-          style={result.style}
-          description={result.description}
-          onRetake={handleRetake}
-        />
-      )}
+        {view === "results" && result && (
+          <ResultsView
+            name={state.name}
+            style={result.style}
+            description={result.description}
+            onRetake={handleRetake}
+          />
+        )}
+      </main>
     </div>
   )
 }

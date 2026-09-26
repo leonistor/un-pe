@@ -1,4 +1,5 @@
 import type { PeopleStyle, StyleDescription } from "@/types"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
@@ -16,34 +17,31 @@ export function ResultsView({
   onRetake,
 }: ResultsViewProps) {
   return (
-    <div className="flex max-w-prose flex-col gap-8">
+    <div className="flex w-full flex-col gap-8">
       <div>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
-          {name}, your personality style
-        </p>
-        <h1 className="mt-1 text-3xl font-medium">{style.name}</h1>
+        <p className="eyebrow">{name}, your personality style</p>
+        <h1 className="text-hero mt-1 font-medium">{style.name}</h1>
         {description.headline && (
-          <p className="mt-2 text-sm italic text-muted-foreground">
-            {description.headline}
-          </p>
+          <p className="prose-muted mt-2 italic">{description.headline}</p>
         )}
       </div>
 
       {description.words && description.words.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
           {description.words.map((word) => (
-            <span
+            <Badge
               key={word}
-              className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
+              variant="secondary"
+              className="h-auto px-3 py-1 text-xs"
             >
               {word}
-            </span>
+            </Badge>
           ))}
         </div>
       )}
 
       {description.short && (
-        <p className="text-sm leading-relaxed text-foreground">
+        <p className="text-body leading-relaxed text-foreground">
           {description.short}
         </p>
       )}
@@ -51,8 +49,8 @@ export function ResultsView({
       <div className="flex flex-col gap-6">
         {description.leaders && (
           <section>
-            <h2 className="mb-2 text-sm font-medium">As a Leader</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <h2 className="section-title">As a Leader</h2>
+            <p className="prose-muted">
               {description.leaders}
             </p>
           </section>
@@ -60,8 +58,8 @@ export function ResultsView({
 
         {description.sales && (
           <section>
-            <h2 className="mb-2 text-sm font-medium">In Sales</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <h2 className="section-title">In Sales</h2>
+            <p className="prose-muted">
               {description.sales}
             </p>
           </section>
@@ -69,8 +67,8 @@ export function ResultsView({
 
         {description.service && (
           <section>
-            <h2 className="mb-2 text-sm font-medium">In Service</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <h2 className="section-title">In Service</h2>
+            <p className="prose-muted">
               {description.service}
             </p>
           </section>
@@ -78,8 +76,8 @@ export function ResultsView({
 
         {description.team && (
           <section>
-            <h2 className="mb-2 text-sm font-medium">As a Team Member</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <h2 className="section-title">As a Team Member</h2>
+            <p className="prose-muted">
               {description.team}
             </p>
           </section>
@@ -87,14 +85,14 @@ export function ResultsView({
 
         {description.quickref && (
           <section>
-            <h2 className="mb-2 text-sm font-medium">Quick Reference</h2>
+            <h2 className="section-title">Quick Reference</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {description.quickref.leadership && (
                 <div>
-                  <h3 className="mb-1 text-xs font-medium text-muted-foreground">
+                  <h3 className="eyebrow mb-1">
                     Leadership
                   </h3>
-                  <ul className="list-inside list-disc text-sm text-muted-foreground">
+                  <ul className="list-inside list-disc text-body text-muted-foreground">
                     {description.quickref.leadership.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -103,10 +101,10 @@ export function ResultsView({
               )}
               {description.quickref.sales && (
                 <div>
-                  <h3 className="mb-1 text-xs font-medium text-muted-foreground">
+                  <h3 className="eyebrow mb-1">
                     Sales
                   </h3>
-                  <ul className="list-inside list-disc text-sm text-muted-foreground">
+                  <ul className="list-inside list-disc text-body text-muted-foreground">
                     {description.quickref.sales.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -115,10 +113,10 @@ export function ResultsView({
               )}
               {description.quickref.service && (
                 <div>
-                  <h3 className="mb-1 text-xs font-medium text-muted-foreground">
+                  <h3 className="eyebrow mb-1">
                     Service
                   </h3>
-                  <ul className="list-inside list-disc text-sm text-muted-foreground">
+                  <ul className="list-inside list-disc text-body text-muted-foreground">
                     {description.quickref.service.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -127,10 +125,10 @@ export function ResultsView({
               )}
               {description.quickref.team && (
                 <div>
-                  <h3 className="mb-1 text-xs font-medium text-muted-foreground">
+                  <h3 className="eyebrow mb-1">
                     Team
                   </h3>
-                  <ul className="list-inside list-disc text-sm text-muted-foreground">
+                  <ul className="list-inside list-disc text-body text-muted-foreground">
                     {description.quickref.team.map((item) => (
                       <li key={item}>{item}</li>
                     ))}

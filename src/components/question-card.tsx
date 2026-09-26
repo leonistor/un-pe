@@ -42,12 +42,12 @@ export function QuestionCard({
   )
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="mx-auto flex w-full max-w-xl flex-col gap-6">
       <ProgressBar current={currentIndex} total={total} />
 
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        Read the four statements below, then tap the one you like best,
-        then the one you like next best, and so on.
+      <p className="prose-muted">
+        Read the four statements below, then tap the one you like best, then the
+        one you like next best, and so on.
       </p>
 
       <div className="flex flex-col gap-2">

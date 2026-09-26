@@ -35,26 +35,25 @@ export function Intro({ onStart, hasSavedProgress, onResume }: IntroProps) {
   }
 
   return (
-    <div className="flex max-w-prose flex-col gap-6">
+    <div className="mx-auto flex w-full max-w-prose flex-col gap-6">
       <div>
-        <h1 className="text-2xl font-medium">Understanding People</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Personality Assessment
-        </p>
+        <p className="eyebrow">Personality Assessment</p>
+        <h1 className="text-hero mt-2 font-medium">Understanding People</h1>
       </div>
 
-      <p className="text-sm leading-relaxed text-muted-foreground">
+      <p className="prose-muted">
         This personality test is based on Dave Mitchell&apos;s book{" "}
         <em>The Power of Understanding People</em>.
       </p>
 
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        You will be asked to rank 12 sets of 4 statements. For each set,
-        tap the statement you like best, then the one you like next best,
-        and so on. Your results will reveal your personality style.
+      <p className="prose-muted">
+        You will be asked to rank 12 sets of 4 statements. For each set, tap the
+        statement you like best, then the one you like next best, and so on.
+        Your results will reveal your personality style.
       </p>
 
       <Input
+        className="h-11 text-base"
         placeholder="Your name (or leave blank for a surprise nickname)"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -63,7 +62,7 @@ export function Intro({ onStart, hasSavedProgress, onResume }: IntroProps) {
         }}
       />
 
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-3">
         {hasSavedProgress ? (
           <>
             <Button onClick={onResume}>Resume Test</Button>
