@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "e2e": "PLAYWRIGHT_BROWSERS_PATH=0 playwright test",
     "e2e:install": "PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium",
+    "e2e:demo": "PLAYWRIGHT_BROWSERS_PATH=0 PW_SLOWMO=300 playwright test --headed --workers=1 --timeout=180000",
     "preview": "vite preview"
   },
   "dependencies": {

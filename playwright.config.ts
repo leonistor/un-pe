@@ -12,6 +12,8 @@ export default defineConfig({
   use: {
     baseURL: BASE_URL,
     trace: "on-first-retry",
+    // PW_SLOWMO=<ms> slows every action for demo/debugging runs.
+    launchOptions: { slowMo: Number(process.env.PW_SLOWMO ?? 0) },
   },
   // Bundled Chromium only — never the Chrome installed on the host machine.
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
